@@ -37,5 +37,11 @@ Deployment	Set up the domain and launch the website.		1 day
 ![alt text](image.png)
 # 8 Changelog
 ## Improved Word Document
-- Improved 
+- Improved on the timeline of development
+- Improved on the timeline Milestone 
+- Improved the website features
+
+## Improved the code structer 
+- I created a styles document to add allof the styles features I previously had within the HTML code.
+
 
