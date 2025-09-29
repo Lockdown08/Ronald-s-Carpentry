@@ -1,0 +1,121 @@
+
+
+.logoMain {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;              
+        justify-content: center;    
+        background-color: #333;
+      }
+
+      nav ul li {
+        margin: 0;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 14px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      nav ul li a:hover {
+        background-color: #555;
+      }
+
+      
+      .slider {
+        position: relative;
+        max-width: 800px;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slides img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      .prev { left: 10px; }
+      .next { right: 10px; }
+      .dots {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .active {
+        background-color: #717171;
+      }
+      h1 {text-align: center; 
+
+      }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;       
+      object-fit: cover;   
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logoMain {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+

@@ -4,115 +4,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Herbert Industries</title>
     <!-- this is the navigation header for each webpage as well as the placeholder for the websites logo-->
-    <style>
-      .logoMain {
-        width: 200px;
-        height: 200px;
-        display: block;
-        margin: 0 auto;
-      }
-
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;              
-        justify-content: center;    
-        background-color: #333;
-      }
-
-      nav ul li {
-        margin: 0;
-      }
-
-      nav ul li a {
-        display: block;
-        padding: 14px 20px;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        transition: background 0.3s;
-      }
-
-      nav ul li a:hover {
-        background-color: #555;
-      }
-
-      
-      .slider {
-        position: relative;
-        max-width: 800px;
-        margin: 20px auto;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      }
-
-      .slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-
-      .slides img {
-        width: 100%;
-        border-radius: 10px;
-      }
-
-      .prev, .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 50%;
-      }
-
-      .prev { left: 10px; }
-      .next { right: 10px; }
-      .dots {
-        text-align: center;
-        margin-top: 10px;
-      }
-
-      .dot {
-        height: 12px;
-        width: 12px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        cursor: pointer;
-      }
-
-      .active {
-        background-color: #717171;
-      }
-      h1 {text-align: center; 
-
-      }
-    </style>
+   <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <header>
-      <img src="_images/" alt="Company Logo" class="logoMain" />
-      <h1>Ronald's Carpentry</h1>
+    <div id="wrapper">
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>  
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="quote.html">Quote</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+      <header><img src="_images/bannerfinal.png" alt="Web banner" width="100%">
+        <nav id="pageLinks">
+          <ul>
+            <li><a href="index.html">Home</a></li>  
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="quote.html">Quote</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <!--these are the images contained within the slider at the top of the home page showcasing the craftmanship being done by the company-->
+    <main>
+     <div id="homeInfo">
+			<h1>Ronald's Carpentry </h1>
+			<h2>Your Home For Exelent Woodwork</h2>
+      <br>
+			<p>Ronald’s Carpentry is a skilled and organized small business, operating in the heart of 
+Johannesburg. They deal with wood working, furniture, repairs and cabinets. Established in 2012 the company has set itself apart from being your regular carpentry shop focusing on delivering in house work and remote work as well. 
+With over 10 years of experience, Ronald Carpentry excels in designing and fabricating woodwork. Our business specializes in kitchens, cupboards, bar counters, wall units, and shelving. We offer both standard sizes and custom-crafted items, proudly installing throughout Johannesburg and delivering within Gauteng.
+      </p>
+		</div>
+     
+      <!--these are the images contained within the slider at the top of the home page showcasing the craftmanship being done by the company-->
     <div class="slider">
       <div class="slides">
         <img src="_images/slide (1).jpg" alt="Woodwork 1">
@@ -125,65 +46,8 @@
     </div>
     <div class="dots"></div>
 
-    <main>
-      <!--This is the about section of the company-->
-      <h1>About Ronald Carpentry</h1>
-      <p>
-        Ronald’s Carpentry is a skilled and organized small business, operating in the heart of 
-Johannesburg. They deal with wood working, furniture, repairs and cabinets. Established in 2012 the company has set itself apart from being your regular carpentry shop focusing on delivering in house work and remote work as well. 
-With over 10 years of experience, Ronald Carpentry excels in designing and fabricating woodwork. Our business specializes in kitchens, cupboards, bar counters, wall units, and shelving. We offer both standard sizes and custom-crafted items, proudly installing throughout Johannesburg and delivering within Gauteng.
-      </p>
     </main>
 
     <footer>
       <p>&copy; 2023 Herbert Industries. All rights reserved.</p>
     </footer>
-
-    <!--This is the code to make my slider function work and gathers the images allowing it to autoplay as well as giving it the function to be pressed to either the previous or next image -->
-    <script>
-      const slides = document.querySelector(".slides");
-      const images = document.querySelectorAll(".slides img");
-      const prev = document.querySelector(".prev");
-      const next = document.querySelector(".next");
-      const dotsContainer = document.querySelector(".dots");
-
-      let index = 0;
-
-      images.forEach((_, i) => {
-        const dot = document.createElement("span");
-        dot.classList.add("dot");
-        if (i === 0) dot.classList.add("active");
-        dot.addEventListener("click", () => moveToSlide(i));
-        dotsContainer.appendChild(dot);
-      });
-
-      const dots = document.querySelectorAll(".dot");
-
-      function updateSlider() {
-        slides.style.transform = `translateX(${-index * 100}%)`;
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[index].classList.add("active");
-      }
-
-      function moveToSlide(i) {
-        index = i;
-        updateSlider();
-      }
-
-      prev.addEventListener("click", () => {
-        index = (index > 0) ? index - 1 : images.length - 1;
-        updateSlider();
-      });
-
-      next.addEventListener("click", () => {
-        index = (index < images.length - 1) ? index + 1 : 0;
-        updateSlider();
-      });
-
-      setInterval(() => {
-        index = (index < images.length - 1) ? index + 1 : 0;
-        updateSlider();
-      }, 4000);
-    </script>
-  </body>
-</html>
