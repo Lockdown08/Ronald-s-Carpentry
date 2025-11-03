@@ -1,5 +1,8 @@
-
-
+/*nav STyling*/
+      nav {
+        background-color: #333;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
 .logoMain {
         width: 200px;
         height: 200px;
@@ -33,7 +36,7 @@
         background-color: #555;
       }
 
-      
+      /* Slider Styling */
       .slider {
         position: relative;
         max-width: 800px;
@@ -85,8 +88,9 @@
       .active {
         background-color: #717171;
       }
-      h1 {text-align: center; 
-
+      
+      #homeInfo {
+        text-align: center;
       }
 
     .gallery {
@@ -118,4 +122,122 @@
   display: block;
   margin: 20px auto;
 }
+
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/*footer STyling*/
+.footer {
+  background-color: #613c1a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'monteserrat', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+  margin: 0;
+}
+
+.headingAbout {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/*Quotation Section */
+.quote-section {
+  background-color: #f5f0e6;
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 5px solid #8B5A2B;
+}
+
+.quote-section h2 {
+  color: #4b2e05;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.quote-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #4b2e05;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c2a278;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #8B5A2B;
+  outline: none;
+  box-shadow: 0 0 4px rgba(139, 90, 43, 0.4);
+}
+
+.quote-btn {
+  background-color: #8B5A2B;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quote-btn:hover {
+  background-color: #A0522D;
+}
+/*message error*/
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/*leaftel map*/
+#map {
+  height: 450px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
 
